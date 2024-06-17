@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="Document" />
+    <meta name="description" content="Your Description..." />
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/swiper js/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="resources/css/loader.css" />
+    <link rel="stylesheet" href="resources/css/hamburger.css" />
+    <link rel="stylesheet" href="resources/css/home.css" />
+    <link rel="stylesheet" href="resources/css/about.css" />
+    <link rel="stylesheet" href="resources/css/services.css">
+    <link rel="stylesheet" href="resources/css/portfolio.css" />
+    <link rel="stylesheet" href="resources/css/contact.css" />
+    <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon" />
+</head>
+
+<body onload="loaded()">
+    <div class="loader">
+        <div class="c c1"></div>
+        <div class="c c2"></div>
+        <div class="c c3"></div>
+        <div class="c c4"></div>
+        <div class="c c5"></div>
+        <div class="c c6"></div>
+    </div>
+    <script>
+        let loader = document.querySelector(".loader");
+        function loaded() {
+            loader.classList.add("remove");
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 1000);
+        }
+    </script>
+    <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+    <div class="hamburger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- THE REAL NAVIGATION -->
+    <nav class="navigation">
+        <h1>
+            Priyanka
+            <div></div>
+            <div></div>
+        </h1>
+        <ul>
+            <li><a href="#" onclick="home()">home</a></li>
+            <li>
+                <a href="#" onclick="about(); animate3.play(); animate4.play();">about</a>
+            </li>
+            <li><a href="#" onclick="services(); animate6.play();">services</a></li>
+            <li><a href="#" onclick="portfolio()">portfolio</a></li>
+            <li>
+                <a href="#" onclick="contact(); animate5.play()">contact</a>
+            </li>
+        </ul>
+        <p>&copy; 2021 Priyanka.</p>
+    </nav>
+
+    <div class="container">
+        <div class="layer layer1 active">
+            <div class="home main">
+                <div class="canvas_container">
+                    <canvas></canvas>
+                </div>
+                <div class="content-for-home">
+                    <div class="img-container"></div>
+                    <h1 align="center">Priyanka Chauhan</h1>
+                    <div class="social-icons">
+                        <div class="s-icon">
+                            <a href="https://www.linkedin.com/in/priyanka-chauhan-0113aa180/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <div class="s-name">Linkedin</div>
+                        </div>
+                        <div class="s-icon">
+                            <a href="https://github.com/pc100798">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <div class="s-name">GitHub</div>
+                        </div>
+                        <div class="s-icon">
+                            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <div class="s-name">Email</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="layer layer2">
+            <div class="about main">
+                <!-- SEGMENT FOR STYLING. -->
+                <div class="styling">
+                    <div class="absolute box"></div>
+                    <div class="absolute circle"></div>
+                    <div class="absolute triangle"></div>
+                    <div class="absolute dots">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                        <div class="dot dot4"></div>
+                        <div class="dot dot5"></div>
+                        <div class="dot dot6"></div>
+                        <div class="dot dot7"></div>
+                        <div class="dot dot8"></div>
+                        <div class="dot dot9"></div>
+                        <div class="dot dot10"></div>
+                        <div class="dot dot11"></div>
+                        <div class="dot dot12"></div>
+                        <div class="dot dot13"></div>
+                        <div class="dot dot14"></div>
+                        <div class="dot dot15"></div>
+                        <div class="dot dot16"></div>
+                        <div class="dot dot17"></div>
+                        <div class="dot dot18"></div>
+                        <div class="dot dot19"></div>
+                        <div class="dot dot20"></div>
+                        <div class="dot dot21"></div>
+                        <div class="dot dot22"></div>
+                        <div class="dot dot23"></div>
+                        <div class="dot dot24"></div>
+                    </div>
+
+                    <svg class="wave absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 320">
+                        <path fill-opacity="1"
+                            d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                        </path>
+                    </svg>
+
+                    <svg class="wave absolute opposite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 320">
+                        <path fill-opacity="1"
+                            d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                        </path>
+                    </svg>
+                </div>
+
+                <!-- REAL CONTENT -->
+                <div class="wrapper">
+                    <div class="face face1">
+                        <div class="content">
+                            <p>Hello,</p>
+                            <h1>I'm Priyanka</h1>
+                            <p class="text">
+                                I am a Frontend Developer, and I'm very
+                                passionate and dedicated to my work With 2
+                                years experience as a Frontend
+                                Developer, I have acquired the skills and
+                                knowledge necessary to make your project a
+                                success I enjoy every step of the design
+                                process, from discussion and collaboration.
+                            </p>
+                            <a class="button download" href="resources/img/Priyanka_Chauhan_Resume.pdf" download="Priyanka_Chauhan_Resume">Download Resume</a>
+                            <a class="button hire" href="#" class="hire" onclick="contact(); animate5.play()">Hire
+                                Me.</a>
+                        </div>
+                    </div>
+                    <div class="face face2"></div>
+                </div>
+
+                <!-- THE NAVIGATION OF ABOUT -->
+                <nav class="about_nav">
+                    <ul>
+                        <li>
+                            <a class="active" href="#" data-text="one">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#" data-text="two">Experience</a>
+                        </li>
+                        <li>
+                            <a href="#" data-text="three">Education</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="about_container">
+                    <!-- SKILL BOX -->
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="name">HTML5</div>
+                            <div class="value" style="left: 90%">90%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="name">CSS3</div>
+                            <div class="value" style="left: 90%">90%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="name">JavaScript</div>
+                            <div class="value" style="left: 75%">75%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="name">ReactJS</div>
+                            <div class="value" style="left: 70%">70%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="name">Redux</div>
+                            <div class="value" style="left: 70%">70%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="name">React Router</div>
+                            <div class="value" style="left: 70%">70%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="name">AWS Services</div>
+                            <div class="value" style="left: 50%">50%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="name">AG Grid</div>
+                            <div class="value" style="left: 50%">50%</div>
+                            <div class="percent">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EXPERIENCE -->
+                    <div class="experience">
+                        <div class="middle_line"></div>
+                        <div class="cover">
+                            <i class="job_box fas fa-briefcase"></i>
+                            <i class="date">Apr 2023 - Present</i>
+                            <h2>Software Developer</h2>
+                            <i class="name_company">Prime Focus Technologies</i>
+                            <article class="text_hidden">
+                                CLEAR project is focused on managing content across various OTT platforms, encompassing
+                                creation, transformation, management and distribution
+                                of various images, audio and video, subtitles and designs. Working collaboratively, we
+                                ensured the production of engaging content tailored to diverse
+                                audiences, optimized for maximum impact and reach across multiple platforms.
+
+                            </article>
+                        </div>
+                        <div class="whitespace"></div>
+                        <div class="whitespace"></div>
+                        <div class="cover">
+                            <i class="job_box fas fa-briefcase"></i>
+                            <i class="date">Feb 2022 - Oct 2022</i>
+                            <h2>Programmer Analyst</h2>
+                            <i class="name_company">Cognizant</i>
+                            <article class="text_hidden">
+                                The project involved designing display interfaces for Centene-MHN using the AS400
+                                midrange server tool, as well as identifying and debugging issues
+                                found
+                            </article>
+                        </div>
+                        <div class="whitespace"></div>
+                        <div class="whitespace"></div>
+                    </div>
+                    <div class="education">
+                        <div class="middle_line"></div>
+                        <div class="cover">
+                            <i class="job_box fas fa-book-reader"></i>
+                            <i class="date">2017 - 2021</i>
+                            <h2>MBM Engineering College, Jodhpur</h2>
+                            <i class="name_company">Bechalor of Engineering</i>
+                            <article class="text_hidden">
+                                Completed Bechalor of Engineering in Electronics and Computer with 81% marks
+                            </article>
+                        </div>
+                        <div class="whitespace"></div>
+                        <div class="whitespace"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layer layer3">
+            <div class="services main">
+                <!-- <section class="background">
+                        <div class="bg_wrapper"></div>
+                    </section> -->
+                <div class="hero">
+                    <span class="typography">
+                        <span class="t_dummy">We know how to</span> <br />
+                        <span class="t-box">
+                            <span class="box-side box-front">take risk</span>
+                            <span class="box-side box-top">take a side</span>
+                            <span class="box-side box-back">be different</span>
+                            <span class="box-side box-bottom">be innovative</span>
+                        </span>
+                    </span>
+                    <p class="hero-text">
+                        "I am a skilled frontend developer and web designer proficient in HTML, CSS, JavaScript,
+                        ReactJS, AWS services, and more. I am reliable, great value for money, and always go the extra
+                        mile."
+                    </p>
+                </div>
+                <div class="capabilities left move-little-down">
+                    <img src="resources/img/elements/web.png" alt="" />
+                    <p class="c_content">
+                        <span class="c_title">Web</span>
+                        With two years of experience, I am a proficient frontend developer skilled in HTML, CSS,
+                        JavaScript, ReactJS, Redux, and React Router. I have a strong foundation in building responsive
+                        and user-friendly web applications, ensuring high-quality code standards and best practices. My
+                        expertise includes creating dynamic interfaces, managing state efficiently with Redux, and
+                        implementing smooth navigation with React Router. I am passionate about leveraging these
+                        technologies to deliver intuitive and impactful user experiences.
+                    </p>
+                </div>
+                <div class="capabilities right">
+                    <p class="c_content">
+                        <span class="c_title">Cloud</span>
+                        With two years of hands-on experience in AWS services, I specialize in AWS SQS, AWS SNS, AWS S3,
+                        and Lambda functions. I have successfully designed and implemented scalable and reliable
+                        solutions using these services, optimizing workflows and improving efficiency. My expertise
+                        includes setting up message queues with SQS, implementing pub/sub messaging with SNS, managing
+                        secure and durable object storage with S3, and developing serverless applications with Lambda
+                        functions. I am committed to leveraging AWS to architect robust cloud-based solutions that meet
+                        business needs and exceed expectations.
+                    </p>
+                    <img src="resources/img/elements/cloud.png" alt="" />
+                </div>
+                <div class="foot">
+                    <h2>Works:</h2>
+                    <div class="foot-link">
+                        <a href="#" onclick="portfolio()">portfolio World</a>
+                        <i class="far fa-arrow-alt-circle-right"></i>
+                        <img src="resources/img/portfolios/app/2.jpg" alt="portfolio" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layer layer4">
+            <div class="portfolio main">
+                <div class="tip main">
+                    <div class="allContent">
+                        <div class="description" style="display: none">
+                            <div class="pro_intro">
+                                <div class="nameplate">
+                                    <h1>Wedding Couple</h1>
+                                    <span class="pro_name">Project Name:
+                                        <span style="color: #999">Web Design</span></span>
+                                </div>
+                                <div class="other_text">
+                                    <h2>Project Brief:</h2>
+                                    <p class="pro_brief" style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            ">
+                                        Lorem ipsum, dolor sit amet
+                                        consectetur adipisicing elit. At
+                                        corrupti modi perferendis iure
+                                        corporis dolores minus asperiores
+                                        nemo debitis veritatis id placeat,
+                                        similique eum recusandae ipsa quia
+                                        cum earum nam?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pro_info">
+                                <h2>Project Info</h2>
+                                <p>
+                                    <b>Tools: </b>
+                                    <span style="color: #999">HTML, CSS, JavaScript</span>
+                                </p>
+                                <p class="link">
+                                    <b>Web: </b>
+                                    <span style="color: #999"><a href="#">www.domain.com</a></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="closeButton">
+                            <span>Project Details</span>
+                            <div class="icon"></div>
+                        </button>
+                        <button class="exitButton">&times;</button>
+
+                        <div class="port_content">
+                            <div class="swiper-container-2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="#" alt="web design" />
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-scrollbar"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="about_nav padding_top">
+                    <h1>portfolio</h1>
+                </nav>
+                <div class="mymixcont">
+                    <div class="mix" id="project1" data-index="0">
+                        <img src="resources/img/portfolios/images.1.png" alt="" />
+                        <span class="title">Portfolio</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                    <div class="mix" id="project2" data-index="1">
+                        <img src="resources/img/portfolios/images.2.jfif" alt="" />
+                        <span class="title">Trade Watch List</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                    <div class="mix" id="project3" data-index="2">
+                        <img src="resources/img/portfolios/images.3.jfif" alt="" />
+                        <span class="title">Weather app</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                    <div class="mix" id="project4" data-index="3">
+                        <img src="resources/img/portfolios/images.4.jfif" alt="" />
+                        <span class="title">Currency Convertor</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                    <div class="mix" id="project5" data-index="4">
+                        <img src="resources/img/portfolios/images.5.jfif" alt="" />
+                        <span class="title">Tic Tac Toe</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                    <div class="mix" id="project6" data-index="5">
+                        <img src="resources/img/portfolios/images.6.jfif" alt="" />
+                        <span class="title">Envelope</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                    <div class="mix" id="project7" data-index="6">
+                        <img src="resources/img/portfolios/images.7.png" alt="" />
+                        <span class="title">Curd API</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                    <div class="mix" id="project8" data-index="7">
+                        <img src="resources/img/portfolios/images.8.jfif" alt="" />
+                        <span class="title">Login Page</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layer layer5">
+            <div class="testimonial">
+                <h1>
+                    <span>See What My Clients Say about Me.</span>
+                </h1>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="resources/img/favicon.ico" alt="" />
+                            <h4>Erik Lasher</h4>
+                            <div class="rating">
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                            </div>
+                            <p>
+                                <span>&ldquo;</span>
+                                Priyanka is an excellent web designer and
+                                faultless technician. she’s a pleasure to
+                                work with, great value for money and will
+                                always go the extra mile when necessary.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="resources/img/favicon.ico" alt="" />
+                            <h4>Erik Lasher</h4>
+                            <div class="rating">
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                            </div>
+                            <p>
+                                <span>&ldquo;</span>
+                                Priyanka is an excellent web designer and
+                                faultless technician. He’s a pleasure to
+                                work with, great value for money and will
+                                always go the extra mile when necessary.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="resources/img/favicon.ico" alt="" />
+                            <h4>Erik Lasher</h4>
+                            <div class="rating">
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                            </div>
+                            <p>
+                                <span>&ldquo;</span>
+                                Priyanka is an excellent web designer and
+                                faultless technician. He’s a pleasure to
+                                work with, great value for money and will
+                                always go the extra mile when necessary.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="resources/img/favicon.ico" alt="" />
+                            <h4>Erik Lasher</h4>
+                            <div class="rating">
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                            </div>
+                            <p>
+                                <span>&ldquo;</span>
+                                Priyankais an excellent web designer and
+                                faultless technician. He’s a pleasure to
+                                work with, great value for money and will
+                                always go the extra mile when necessary.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="resources/img/favicon.ico" alt="" />
+                            <h4>Erik Lasher</h4>
+                            <div class="rating">
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                            </div>
+                            <p>
+                                <span>&ldquo;</span>
+                                Priyanka is an excellent web designer and
+                                faultless technician. He’s a pleasure to
+                                work with, great value for money and will
+                                always go the extra mile when necessary.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="resources/img/favicon.ico" alt="" />
+                            <h4>Erik Lasher</h4>
+                            <div class="rating">
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                                <label>&starf;</label>
+                            </div>
+                            <p>
+                                <span>&ldquo;</span>
+                                Priyanka is an excellent web designer and
+                                faultless technician. He’s a pleasure to
+                                work with, great value for money and will
+                                always go the extra mile when necessary.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layer layer6">
+            <div class="contact_us">
+                <div id="map"></div>
+                <address class="info_container">
+                    <div class="info info1">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="iname">Phone</span>
+                        <a href="tel:8118890285">+91 8118890285</a>
+                        <a href="tel:9557911846">+91 9557911846</a>
+                    </div>
+                    <div class="info info2">
+                        <i class="fas fa-home"></i>
+                        <span class="iname">Address</span>
+                        <a
+                            href="https://www.google.com/maps/place/Adarsh+Nagar,+Sirohi,+Rajasthan+307001/@24.9017772,72.8495027,3099m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3942db05ec705d25:0x905836c19aeece9e!2sAdarsh+Nagar,+Sirohi,+Rajasthan+307001!3b1!8m2!3d24.8998689!4d72.8604097!16s%2Fg%2F1hjh6m395!3m5!1s0x3942db05ec705d25:0x905836c19aeece9e!8m2!3d24.8998689!4d72.8604097!16s%2Fg%2F1hjh6m395?entry=ttu">
+                            <h3>A-64 Adrash Nagar Colony</h3>
+                            <span>Sirohi, Rajasthan</span>
+                        </a>
+                    </div>
+                    <div class="info info3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="iname">Email</span>
+                        <a href="mailto:email1.gmail.com">priyankasirohi64@gmail.com</a>
+                        <a href="mailto:email2.gmail.com">chauhanpriyanka2209@gmail.com</a>
+                    </div>
+                </address>
+
+                <form action="#" method="post">
+                    <h1>Get In Touch</h1>
+                    <div class="inp_field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" class="fname" id="fname" placeholder="Full Name" required />
+                    </div>
+                    <div class="inp_field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" class="email" id="email" placeholder="Email" required />
+                    </div>
+                    <div class="inp_field">
+                        <i class="fas fa-angle-double-right"></i>
+                        <input type="text" name="subject" class="subject" id="subject" placeholder="Subject" required />
+                    </div>
+                    <textarea name="message" cols="30" rows="5" class="message" id="message" placeholder="Message"
+                        required></textarea>
+                    <button class="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+    <script src="resources/js/jquery.min.js"></script>
+    <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+    <script src="resources/js/mixitup.min.js"></script>
+    <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
+    <script src="resources/swiper js/swiper-bundle.min.js"></script>
+    <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+    <script src="resources/mapbox-gl/mapbox-gl.js"></script>
+    <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+    <script src="resources/js/email.min.js"></script>
+    <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+        })();
+    </script>
+    <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+    <script src="resources/js/vanilla-tilt.min.js"></script>
+    <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+    <script src="resources/js/anime.min.js"></script>
+    <!-----------------LOCAL (HOME)----------------->
+    <script src="resources/js/home.js"></script>
+    <!-----------------LOCAL (ABOUT)----------------->
+    <script src="resources/js/about.js"></script>
+    <!-----------------LOCAL (SERVICES)----------------->
+    <script src="resources/js/services.js"></script>
+    <!-----------------LOCAL (PORTFOLIO)----------------->
+    <script src="resources/js/portfolio.js"></script>
+    <!-----------------LOCAL (CONTACT)----------------->
+    <script src="resources/js/contact.js"></script>
+    <!-----------------LOCAL (MAIN FILE)----------------->
+    <script src="resources/js/main.js"></script>
+
+    <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+    <script>
+        const animate1 = anime.timeline({
+            targets: ".circle",
+            loop: true,
+            duration: 2000,
+            direction: "alternate",
+            easing: "easeInOutQuad",
+        });
+        animate1.add({
+            translateX: 350,
+        });
+
+        let dot = document.querySelectorAll(".dot");
+        for (let i = 0; i < dot.length; i++) {
+            const ind = dot[i];
+            const animate2 = anime.timeline({
+                targets: ind,
+                loop: true,
+                direction: "alternate",
+                delay: i * 100,
+            });
+            animate2.add({
+                scale: 2,
+            });
+        }
+
+        let span = document.querySelectorAll(".content .text span");
+        const animate3 = anime.timeline({
+            targets: span,
+            easing: "easeInOutExpo",
+            delay: anime.stagger(20, { direction: "reverse" }),
+            direction: "reverse",
+            autoplay: false,
+        });
+
+        animate3.add({
+            rotate: () => {
+                return anime.random(-360, 360);
+            },
+            translateX: () => {
+                return anime.random(-500, 500);
+            },
+            translateY: () => {
+                return anime.random(-500, 500);
+            },
+            duration: 3000,
+        });
+
+        const animate4 = anime({
+            targets: ".button",
+            scale: [0, 1],
+            delay: anime.stagger(200, { start: 7000 }),
+            autoplay: false,
+        });
+
+        const animate5 = anime({
+            targets: [
+                document.querySelectorAll(".info"),
+                document.querySelectorAll(".inp_field"),
+                ".message",
+                ".submit",
+            ],
+            translateY: [50, 0],
+            rotateX: [90, 0],
+            opacity: [0, 1],
+            delay: anime.stagger(300, { start: 1000 }),
+            duration: 750,
+            autoplay: false,
+            easing: "easeOutQuint",
+        });
+
+        const animate6 = anime({
+            targets: ['.services .t_dummy', '.services .hero-text'],
+            duration: 1000,
+            scaleX: [0, 1],
+            delay: anime.stagger(300, { start: 1000 }),
+            autoplay: false,
+        });
+
+        function resize() {
+            if (window.innerWidth <= 632) {
+                animate5.play();
+                animate3.play();
+                animate4.play();
+                animate6.play();
+            }
+        }
+        resize();
+        window.addEventListener("resize", resize);
+    </script>
+</body>
+
+</html>

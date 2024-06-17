@@ -1,0 +1,117 @@
+.home {
+    background-color: #0d1117;
+    z-index: 2;
+}
+
+.canvas_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    margin-left: 250px;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas_container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-for-home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-for-home .img-container {
+    width: 400px;
+    height: 400px;
+    background: url("../img/Priyanka_pic.jpeg") no-repeat top left;
+    background-size: cover;
+}
+
+.content-for-home .img-container img {
+    object-fit: cover;
+}
+
+.content-for-home .social-icons {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content-for-home .social-icons .s-icon {
+    position: relative;
+    margin: 10px 25px;
+}
+
+.content-for-home .social-icons .s-icon a {
+    color: #606d79;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.content-for-home .social-icons .s-icon a i {
+    font-size: 35px;
+}
+
+.content-for-home .social-icons .s-icon .s-name {
+    position: absolute;
+    font-size: 15px;
+    opacity: 0;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.3s ease-out;
+}
+
+.content-for-home .social-icons .s-icon:hover .s-name {
+    opacity: 1;
+    bottom: -25px;
+}
+
+.content-for-home .social-icons .s-icon:hover a {
+    color: dodgerblue;
+}
+
+@media (max-width: 768px) {
+    .canvas_container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 306px) {
+    .content-for-home .img-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .side-nav {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .content-for-home .img-container {
+        width: 200px;
+        height: 200px;
+        background: url(../img/Priyanka_pic.jpeg) no-repeat top left;
+        background-size: cover;
+    }
+}
